@@ -1,0 +1,253 @@
+
+.content-area-juego {
+    position: relative; 
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* --- ESTILOS PARA LA FLECHA DE VOLVER --- */
+.back-arrow-link {
+    position: absolute;
+    top: 25px;  
+    left: 25px; 
+    z-index: 1001; 
+}
+
+.back-arrow-link img {
+    width: 50px; 
+    height: auto;
+    transition: transform 0.2s ease; /* Efecto suave */
+}
+
+.back-arrow-link:hover img {
+    transform: scale(1.1);
+}
+
+
+/* --- ESTILOS DEL JUEGO--- */
+
+.titulo {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(15, 25px);
+    grid-template-rows: repeat(15, 25px);
+    gap: 1px;
+    background-color: #0a4624;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    user-select: none;
+}
+
+.grid-cell {
+    width: 25px;
+    height: 25px;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.grid-cell.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+.grid-cell.found {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#words-container {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 180px;
+}
+
+#words-container h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#words-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#words-list li {
+    padding: 6px;
+    font-size: 14px;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+#words-list li.found {
+    text-decoration: line-through;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* --- ESTILOS DEL MODAL DE VICTORIA --- */
+.modal-overlay {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-header {
+    background: #0a4624;
+    color: white;
+    padding: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.modal-overlay:not(.hide) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-body{
+    padding: 40px;
+}
+
+.modal-overlay:not(.hide) .modal-content {
+    transform: scale(1);
+}
+
+.modal-content .modal-body h2 {
+    font-size: 30px;
+    color: black;
+    margin-top: 0;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+#play-again-btn {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#play-again-btn:hover {
+    background-color: rgb(20, 100, 58);
+}
+
+#rojo {
+    background-color: red;
+}
+
+
+.ya_jugaste{
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#next-btn2 {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+#next-btn2:hover {
+    background-color: rgb(20, 100, 58);
+}
+
+.game-container2{
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    max-width: 650px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+
+.game-container {
+    color: black;
+    max-width: 650px; 
+    text-align: center;
+}
+
+.game-header {
+    background: #0a4624;
+    color: #ffffff; 
+    padding: 15px 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+.hide {
+    display: none;
+
+}

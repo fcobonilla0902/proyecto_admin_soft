@@ -1,0 +1,115 @@
+
+.modulosWrapper {
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.modulosWrapper a {
+    max-height: 260px;
+    max-width: 360px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: block;      
+}
+
+.modulosWrapper a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.modulo {
+    background-color: rgb(197, 195, 195);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.modulo h1 {
+    color: black;
+    text-align: center;
+    padding: 20px 10px 10px 10px; 
+    margin: 0;
+    font-size: 1.5rem; 
+}
+
+.modulo h3 {
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem; 
+    margin-bottom: 7px;
+}
+
+.modulo img{
+    max-width: 90px;
+    /* Se necesita que sea un elemento de bloque para que auto margin funcione */
+    display: block; 
+    /* Centra la imagen horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Estilos para el contenedor de la barra de progreso */
+.info__porcentaje {
+    position: relative; 
+    background-color: #e0e0e0; 
+    height: 30px; 
+    width: 100%;
+    overflow: hidden; 
+    margin-top: 10px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la barra que indica el progreso */
+.barra-progreso {
+    position: absolute; /* Posicionamiento absoluto dentro de .info__porcentaje */
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Color de la barra de progreso, puedes cambiarlo */
+    background-color: #4caf50; /* Un verde, por ejemplo */
+    /* Asegúrate de que la transición sea suave */
+    transition: width 0.5s ease;
+    z-index: 1; /* Para que esté debajo del texto del porcentaje */
+}
+
+/* Estilos para el texto del porcentaje (para que se vea encima de la barra) */
+.porcentaje-texto {
+    position: relative; /* Lo posiciona sobre la barra de progreso */
+    margin: 0;
+    color: #333; /* Color del texto, puedes cambiarlo */
+    font-weight: bold;
+    z-index: 2; /* Para que esté por encima de la barra (barra-progreso) */
+}
+
+.modulo .info__texto {
+    display: flex;
+    justify-content: center;
+    background-color: #1a9e53; 
+    width: 100%;
+}
+
+
+.modulo .info__texto h4 {
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+}

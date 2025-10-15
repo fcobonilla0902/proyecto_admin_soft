@@ -1,0 +1,35 @@
+{
+  "name": "proyecto-admin-soft",
+  "version": "1.0.0",
+  "description": "- php\r - node\r - npm\r - API key de Google (solicitar al equipo)",
+  "main": "src/js/ai/agent.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/js/ai-agent.js",
+    "dev": "node --watch src/js/ai-agent.js",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.41",
+    "@langchain/core": "^0.3.59",
+    "@langchain/google-genai": "^0.2.5",
+    "@langchain/langgraph": "^0.2.67",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuelMaganaL/proyecto_admin_soft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManuelMaganaL/proyecto_admin_soft/issues"
+  },
+  "homepage": "https://github.com/ManuelMaganaL/proyecto_admin_soft#readme"
+}

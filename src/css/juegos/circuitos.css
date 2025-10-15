@@ -1,0 +1,312 @@
+/* --- ESTILOS GENERALES DEL JUEGO --- */
+
+.content-area-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+#game-container {
+    background-color: #ffffff; 
+    padding: 0; 
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: #212529;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    max-width: 650px;
+    margin-top: -80px; 
+}
+
+
+/* --- NUEVO ESTILO PARA EL HEADER DEL JUEGO --- */
+.game-header {
+    background: #0a4624;
+    color: #ffffff; 
+    padding: 15px 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#level-title {
+    color: #343a40; 
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+#instructions p {
+    color: #495057; 
+    font-size: 1.1em;
+    min-height: 30px;
+    padding: 0 10px;
+}
+
+/* --- ESTILOS DEL CIRCUITO --- */
+#circuit-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 20px 20px 20px; 
+    border: 1px solid #ced4da;
+}
+
+.input-section, .output-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.gate-section img {
+    width: 165px;
+    height: auto;
+    filter: invert(10%); 
+}
+
+/* --- ESTILOS DE LOS INTERRUPTORES (SWITCH) --- */
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: #343a40; 
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #adb5bd; 
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #28a745; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* --- ESTILOS DEL LED --- */
+#led {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.led-off {
+    background-color: #6c757d; 
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.led-on {
+    background-color: #ffc107; 
+    box-shadow: 0 0 15px #ffc107, 0 0 30px #ffc107, inset 0 0 5px #ffeb3b;
+}
+
+/* --- MENSAJE DE VICTORIA Y BOTÓN --- */
+#win-message {
+    font-size: 1.2em;
+    color: #28a745; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+    padding: 0 9rem;
+}
+
+#next-level-btn {
+    background-color:#0a4624;; 
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    transition: background-color 0.3s;
+}
+
+#next-level-btn:hover {
+    background-color: #0a4624;;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Back Arrow Link --- */
+.back-arrow-link {
+    position: absolute;
+    top: 25px;   
+    left: 25px; 
+    z-index: 1001; 
+}
+
+.back-arrow-link img {
+    width: 50px; 
+    height: auto;
+    transition: transform 0.2s ease; 
+}
+
+.back-arrow-link:hover img {
+    transform: scale(1.1);
+}
+
+
+/* --- ESTILOS DEL MODAL DE VICTORIA --- */
+.modal-overlay {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-header {
+    background: #0a4624;
+    color: white;
+    padding: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.modal-overlay:not(.hide) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    margin-top: -80px; 
+}
+
+.modal-body{
+    padding: 40px;
+}
+
+.modal-overlay:not(.hide) .modal-content {
+    transform: scale(1);
+}
+
+.modal-content .modal-body h2 {
+    font-size: 30px;
+    color: black;
+    margin-top: 0;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+#play-again-btn {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#play-again-btn:hover {
+    background-color: #0a4624;
+}
+
+
+.hide {
+    display: none;
+}
+
+.ya_jugaste{
+    padding: 15px 50px 30px 50px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#next-btn2 {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+#next-btn2:hover {
+    background-color: rgb(20, 100, 58);
+}

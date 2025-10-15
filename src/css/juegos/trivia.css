@@ -1,0 +1,237 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/* --- ESTILOS PARA EL CONTENEDOR PRINCIPAL Y LA FLECHA --- */
+main.content-area {
+    position: relative; 
+    padding-top: 20px; 
+}
+
+/* --- FLECHA DE REGRESO --- */
+.back-arrow-link {
+    position: absolute;
+    top: 25px;  
+    left: 25px; 
+    z-index: 1001;
+}
+
+.back-arrow-link img {
+    width: 50px; 
+    transition: transform 0.2s ease;
+}
+
+.back-arrow-link:hover img {
+    transform: scale(1.1);
+}
+
+.back-arrow-link:hover img {
+    transform: scale(1.1);
+}
+
+.quiz-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+
+.quiz-header {
+    background: #0a4624;
+    color: white;
+    padding: 15px;
+}
+
+.quiz-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.quiz-body {
+    padding: 25px;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    min-height: 40px;
+    margin: 0;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.options button {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.options button:hover:not([disabled]) {
+    background: #e0e0e0;
+    border-color: #c0c0c0;
+}
+        
+.options button.correct {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+        
+.options button.incorrect {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+        
+#next-btn, #start-btn, #restart-btn {
+    background: #0a4624;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover, #start-btn:hover, #restart-btn:hover {
+    background: #0a4624;
+}
+        
+#progress {
+    margin-top: 5px;
+    color: #6c757d;
+    margin: 0;
+}
+
+
+/* --- ESTILOS DEL MODAL DE VICTORIA --- */
+.modal-overlay {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: 30px;
+}
+
+.modal-header {
+    background: #0a4624;
+    color: white;
+    padding: 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.modal-overlay:not(.hide) {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-body{
+    padding: 40px;
+}
+
+.modal-body #score{
+    font-weight: bold;
+}
+
+.modal-overlay:not(.hide) .modal-content {
+    transform: scale(1);
+}
+
+.modal-content .modal-body h2 {
+    font-size: 28px;
+    color: black;
+    margin-top: 0;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+#restart-btn {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#restart-btn:hover {
+    background-color: rgb(20, 100, 58);
+}
+
+
+.hidden {
+    display: none;
+}
+
+.ya_jugaste{
+    padding: 0 0 30px 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#next-btn2 {
+    font-size: 16px;
+    padding: 12px 35px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a4624;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+#next-btn2:hover {
+    background-color: rgb(20, 100, 58);
+}

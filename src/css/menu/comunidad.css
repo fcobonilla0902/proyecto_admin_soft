@@ -1,0 +1,192 @@
+/* --- Variables de Color y Estilos Base --- */
+:root {
+    --verde-oscuro: #0a4624; 
+    --azul-avatar: #63d3ee;
+    --fondo-pagina: #FFFFFF;
+    --texto-principal: #000000;
+    --texto-secundario: #555555;
+    --borde-input: #B0B0B0;
+    --borde-radio: 25px; 
+}
+
+/* --- Contenedor Principal de la Comunidad --- */
+.comunidad-container {
+    font-family: Arial, sans-serif;
+    padding: 10px 20px 20px 20px;
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+/* --- Encabezado --- */
+.comunidad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 10px;
+}
+.comunidad-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: black;
+}
+
+.comunidad-header img {
+    max-width: 90px;
+}
+.comunidad-icono {
+    max-width: 100px;
+}
+
+/* --- Formulario de Nuevo Comentario --- */
+.nuevo-comentario {
+    margin-bottom: 1.5rem;
+}
+.comentario-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.form-input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.form-input-group input[type="text"] {
+    flex-grow: 1; /* El input ocupa el espacio disponible */
+    border: 2px solid #0a4624;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+.form-input-group input[type="text"]:focus {
+    outline: none;
+    border-color: #0a4624;
+}
+
+
+.boton-publicar {
+    background-color: #0a4624;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.boton-publicar:hover {
+    background-color: rgb(20, 100, 58);
+}
+
+
+/* --- Lista de Comentarios --- */
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.lista-comentarios{
+    max-height: 310px;
+    overflow-y: auto;
+}
+
+.comentario {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.8rem;
+    align-items: flex-start; /* Alinea los items al inicio */
+    border: 2px solid #0a4624;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* --- Info del Autor (Lado Izquierdo del Comentario) --- */
+.comentario-autor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-basis: 220px; /* Ancho fijo para la columna del autor */
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--azul-avatar);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.autor-info .nombre {
+    font-weight: bold;
+    margin: 0;
+}
+.autor-info .rol {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin: 0;
+}
+
+/* --- Contenido del Comentario (Lado Derecho) --- */
+.comentario-contenido {
+    flex-grow: 1;
+    position: relative;
+    border-left: 4px solid #0a4624;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    min-height: 80px;
+    max-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comentario-contenido p {
+    margin: 0 0 0.5rem 0;
+    word-wrap: break-word;
+}
+
+.comentario-footer {
+    display: flex;
+    justify-content: space-between; /* fecha a la izq, acciones a la der */
+    align-items: center;
+}
+
+.comentario-fecha p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.comentario-acciones {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+.comentario-acciones .btn-reaccion {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.comentario-acciones img {
+    max-width: 25px;
+}
+.accion {
+    cursor: pointer;
+    user-select: none; 
+}
+
+.no_login a{
+    text-decoration: none;
+}

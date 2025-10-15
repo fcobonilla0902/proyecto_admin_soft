@@ -1,0 +1,218 @@
+/* --- ESTILOS GENERALES Y LAYOUT --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+a{
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- PANEL IZQUIERDO (VERDE) --- */
+.left-panel {
+    flex: 0 0 50%; /* Ocupa el 50% del ancho */
+    background-color: #0a4624; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.left-panel .logo-bear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-panel .logo-bear img {
+    max-height: 400px;
+    max-width: 300px;
+}
+
+
+/* --- PANEL DERECHO (FORMULARIO) --- */
+.right-panel {
+    flex: 0 0 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado alto */
+}
+
+.right-panel .header-logo {
+    width: 150px;
+    height: 75px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.right-panel .header-logo img {
+    margin-top: 30px;
+    max-width: 230px;
+    max-height: 130px;
+    margin-bottom: 20px;
+}
+
+.middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    max-width: 400px; 
+    margin-top: 10px;
+}
+
+
+.acciones{
+    margin-top: 25px; 
+    display: flex;
+    width: 100%;
+    min-width: 600px; 
+    text-align: center; 
+    justify-content: center;
+    gap: 25px;
+}
+
+.acciones a{
+      font-size: 16px; 
+      color: #1c1c1c;
+      text-decoration: none;
+}
+    
+
+/* FORMULARIO */
+.login-form {
+    width: 100%;
+    min-width: 600px;
+    background-color: #e9e9e9; 
+    border: 2px solid #333;
+    padding: 25px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.login-form h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- ESTILOS PARA LA NUEVA FILA DE 2 COLUMNAS --- */
+.form-row-2-col {
+    display: flex;
+    gap: 20px; /* Espacio entre las dos columnas */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-row-2-col .form-col {
+    flex: 1; /* Distribuye el espacio equitativamente (aprox. 50% cada uno) */
+    display: flex;
+    flex-direction: column; /* Apila la etiqueta y el campo dentro de cada columna */
+}
+
+/* Asegura que el input y el select dentro de esta fila ocupen el 100% de su columna */
+.form-row-2-col .form-col input,
+.form-row-2-col .form-col select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajusta el estilo del select para que sea consistente con los inputs */
+.login-form select {
+    background-color: white;
+    border: 2px solid #0a4624; 
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Consistente con el margen inferior de los inputs */
+    line-height: 1.5;
+    color: #333;
+    cursor: pointer;
+}
+
+.login-form select:focus {
+    outline: none; 
+    box-shadow: none; 
+    border-color: #0a4624; 
+}
+/* --- FIN DE ESTILOS PARA LA NUEVA FILA --- */
+
+
+/* Se elimina la clase .tipo antigua y se usa la nueva estructura .form-row-2-col */
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #0a4624; 
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0a4624;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #083b1e;
+}
+
+
+/* FOOTER */
+
+.footer-logos {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px; /* Espacio entre logos */
+}
+
+.footer-logos .logo-placeholder {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logos .logo-placeholder img {
+    max-width: 280px;
+    max-height: 80px;
+}

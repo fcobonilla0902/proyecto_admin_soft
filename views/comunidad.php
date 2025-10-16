@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="lista-comentarios">
             
             <?php
-            $busqueda = "SELECT c.id, c.identificador, c.comentario, c.fecha, a.nombre, a.apellido,
+            $busqueda = "SELECT c.id, c.identificador, c.comentario, c.fecha, a.nombre, a.apellido, a.tipo,
                 (SELECT COUNT(*) FROM reacciones WHERE id_comunidad = c.id AND reaccion = '1') AS likes,
                 (SELECT COUNT(*) FROM reacciones WHERE id_comunidad = c.id AND reaccion = '0') AS dislikes
                 FROM comunidad c
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="autor-info">
                         <p class="nombre"><?php echo htmlspecialchars($comunidad['nombre']); ?></p>
-                        <p class="rol">Alumno de FIME</p> 
+                        <p class="rol"><?php echo ($comunidad['tipo'] == 1) ? "Alumno de FIME" : "Alumno Externo"; ?></p> 
                     </div>
                 </div>
 

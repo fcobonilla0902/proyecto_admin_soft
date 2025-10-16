@@ -24,6 +24,14 @@ include_once '../templates/header.php'; ?>
     <?php
         while ($fila = mysqli_fetch_assoc($resultado)):
             $primerNombre = strtolower(explode(" ", $fila['nombre'])[0]);
+
+            $mapaAcentos = [
+                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+                'ü' => 'u', 'ñ' => 'n', 'Á' => 'A', 'É' => 'E', 'Í' => 'I',
+                'Ó' => 'O', 'Ú' => 'U', 'Ü' => 'U', 'Ñ' => 'N',
+            ];
+
+            $primerNombreSinAcentos = strtr($primerNombre, $mapaAcentos);
             $modulo_id = $fila['id']; // ID del módulo actual
             $porcentaje = 0; // Porcentaje por defecto
 
@@ -51,11 +59,11 @@ include_once '../templates/header.php'; ?>
             $texto_accion = ($porcentaje > 0 && $porcentaje < 100) ? 'Continuar' : (($porcentaje == 100) ? 'Completado' : 'Comenzar');
 
     ?>
-        <a href="modulos/<?php echo $primerNombre;?>.php?op=2">
+        <a href="modulos/<?php echo $primerNombreSinAcentos;?>.php?op=2">
             <div class="modulo">
                 <h1><?php echo "Módulo " . $fila['id']; ?></h1>
                 <h3><?php echo $fila['nombre'];?></h3>
-                <img src="<?php echo '/src/img/modulos/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre'];?>">
+                <img src="<?php echo '/src/img/modulos/' . $primerNombreSinAcentos . '.png';?>" alt="<?php echo $fila['nombre'];?>">
 
                 <div class="info__porcentaje">
                     <div class="barra-progreso" style="width: <?php echo $porcentaje; ?>%;"></div>

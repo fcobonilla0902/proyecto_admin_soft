@@ -8,7 +8,7 @@
             </div>
             <div class="footer-enlaces">
                 <a href="../views/soporte.php">Centro de soporte</a>
-                <a href="#">Acerca de</a>
+                <a href="../views/acerca.php">Acerca de</a>
             </div>
         </footer>
 

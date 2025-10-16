@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="comunidad-container">
         <div class="comunidad-header">
             <h1>Comunidad: Comparte y Conecta</h1>
-            <img src="/src/img/comunidad.png" alt="Comunidad">
+            <img src="/src/img/comunidad/comunidad.png" alt="Comunidad">
         </div>
         
         <div class="nuevo-comentario">

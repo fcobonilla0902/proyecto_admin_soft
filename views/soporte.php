@@ -20,7 +20,7 @@ include_once '../templates/header.php'; ?>
 <div class="header">
     <h2 class="titulo_soporte"><?php echo $tituloWrapper;?></h2>
 
-    <img src="/src/img/vive_fime.png" alt="Vive la FIME">
+    <img src="/src/img/soporte/vive_fime.png" alt="Vive la FIME">
 </div>
 
 <main class="soporteWrapper">
@@ -32,7 +32,7 @@ include_once '../templates/header.php'; ?>
         <a href="#">
             <div class="soporte">
                 <h3><?php echo $fila['nombre'];?></h3>
-                <img src="<?php echo '/src/img/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre'];?>">
+                <img src="<?php echo '/src/img/soporte/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre'];?>">
                 <div class="info__texto"><h4>Ver más</h4></div>
             </div>
         </a>     

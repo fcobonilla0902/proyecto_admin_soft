@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const playAgainBtn = document.getElementById('play-again-btn');
 
     const robotParts = [
-        { id: 'sensor', name: 'Sensor de proximidad', imgSrc: '/src/img/sensor.png' },
-        { id: 'microcontrolador', name: 'Microcontrolador', imgSrc: '/src/img/microcontrolador.png' },
-        { id: 'servo_motor', name: 'Servo Motor', imgSrc: '/src/img/servo_motor.png' },
-        { id: 'chasis', name: 'Chasis', imgSrc: '/src/img/chasis.png' },
-        { id: 'fuente', name: 'Fuente de energía', imgSrc: '/src/img/fuente.png' }
+        { id: 'sensor', name: 'Sensor de proximidad', imgSrc: '/src/img/juegos/robo-puzle/sensor.png' },
+        { id: 'microcontrolador', name: 'Microcontrolador', imgSrc: '/src/img/juegos/robo-puzle/microcontrolador.png' },
+        { id: 'servo_motor', name: 'Servo Motor', imgSrc: '/src/img/juegos/robo-puzle/servo_motor.png' },
+        { id: 'chasis', name: 'Chasis', imgSrc: '/src/img/juegos/robo-puzle/chasis.png' },
+        { id: 'fuente', name: 'Fuente de energía', imgSrc: '/src/img/juegos/robo-puzle/fuente.png' }
     ];
 
     let correctMatches = 0;

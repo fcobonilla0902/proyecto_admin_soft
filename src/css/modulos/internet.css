@@ -103,8 +103,8 @@ p{
 
 .internet_img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    max-width: 500px;
+    max-height: 400px;
     margin: 15px auto;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
@@ -115,21 +115,62 @@ p{
     margin: 25px 0;
 }
 
-/* Estilo para imágenes de ancho medio */
-.image-container.half-width {
-    max-width: 450px; /* Limita el ancho */
-    margin-left: 0; /* Alinea a la izquierda para un layout de texto/imagen */
+.half-width{
     display: flex;
-    gap: 30px;
 }
 
-/* Estilos para listas */
-ul {
-    list-style-type: disc;
-    margin-left: 25px;
-    padding-left: 0;
+/* Estilos para el contenedor de cada componente */
+.component-section {
+    margin-bottom: 35px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
+/* Estilo para los títulos de los componentes (ocupan el ancho completo) */
+.component-section h3 {
+    color: #0a4624;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Contenedor para alinear texto e imagen */
+.component-content-wrapper {
+    display: flex; /* Activa el layout flexible para los elementos internos */
+    flex-direction: row; /* Coloca los elementos uno al lado del otro */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+    gap: 20px; 
+}
+
+/* Contenedor del texto (izquierda) */
+.component-text {
+    flex-basis: 65%; 
+    text-align: left;
+}
+
+/* Contenedor de la imagen (derecha) */
+.component-image {
+    flex-basis: 35%; /* La imagen ocupa el 35% del ancho */
+    text-align: right;
+}
+
+.component-image .internet_img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; 
+}
+
+/* interlineado */
+.main-container p, 
+.component-section p, 
+.component-section ul li {
+    line-height: 1.7; /* Valor común para mejor lectura (antes era 1.6) */
+}
+
+/* span */
 .resaltado{
     font-weight: bold;
 }

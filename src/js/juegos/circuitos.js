@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const levels = [
-        { name: "Compuerta AND", gate: "AND", inputs: 2, image: "/src/img/and_gate.png", instruction: "Una compuerta AND solo se enciende si AMBAS entradas están activas (1)." },
-        { name: "Compuerta OR", gate: "OR", inputs: 2, image: "/src/img/or_gate.png", instruction: "Una compuerta OR se enciende si CUALQUIERA de sus entradas está activa (1)." },
-        { name: "Compuerta NAND", gate: "NAND", inputs: 2, image: "/src/img/nand_gate.png", instruction: "Una compuerta NAND se enciende siempre, EXCEPTO cuando ambas entradas están activas." },
-        { name: "Compuerta NOR", gate: "NOR", inputs: 2, image: "/src/img/nor_gate.png", instruction: "Una compuerta NOR solo se enciende cuando AMBAS entradas están inactivas (0)." },
-        { name: "Compuerta NOT", gate: "NOT", inputs: 1, image: "/src/img/not_gate.png", instruction: "Una compuerta NOT INVIERTE la entrada. Si la entrada es 0, la salida es 1." },
-        { name: "Compuerta XOR", gate: "XOR", inputs: 2, image: "/src/img/xor_gate.png", instruction: "Una compuerta XOR se enciende solo si las entradas son DIFERENTES." }
+        { name: "Compuerta AND", gate: "AND", inputs: 2, image: "/src/img/juegos/circuitos/and_gate.png", instruction: "Una compuerta AND solo se enciende si AMBAS entradas están activas (1)." },
+        { name: "Compuerta OR", gate: "OR", inputs: 2, image: "/src/img/juegos/circuitos/or_gate.png", instruction: "Una compuerta OR se enciende si CUALQUIERA de sus entradas está activa (1)." },
+        { name: "Compuerta NAND", gate: "NAND", inputs: 2, image: "/src/img/juegos/circuitos/nand_gate.png", instruction: "Una compuerta NAND se enciende siempre, EXCEPTO cuando ambas entradas están activas." },
+        { name: "Compuerta NOR", gate: "NOR", inputs: 2, image: "/src/img/juegos/circuitos/nor_gate.png", instruction: "Una compuerta NOR solo se enciende cuando AMBAS entradas están inactivas (0)." },
+        { name: "Compuerta NOT", gate: "NOT", inputs: 1, image: "/src/img/juegos/circuitos/not_gate.png", instruction: "Una compuerta NOT INVIERTE la entrada. Si la entrada es 0, la salida es 1." },
+        { name: "Compuerta XOR", gate: "XOR", inputs: 2, image: "/src/img/juegos/circuitos/xor_gate.png", instruction: "Una compuerta XOR se enciende solo si las entradas son DIFERENTES." }
     ];
 
     let currentLevelIndex = 0;

@@ -22,7 +22,7 @@ include_once 'templates/header.php';
     ?>
         <a href="#">
             <div class="info">
-                <img src="<?php echo '/src/img/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre']; ?>">
+                <img src="<?php echo '/src/img/inicio/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre']; ?>">
                 <div class="info__texto"><h4><?php echo $fila['nombre']; ?></h4></div>
             </div>
         </a>     

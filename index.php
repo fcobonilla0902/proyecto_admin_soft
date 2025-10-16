@@ -6,10 +6,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-
 $titulo = "Inicio";
 
-$query = "SELECT * FROM inicio";
+$query = "SELECT * FROM inicio"; 
 $resultado = mysqli_query($db, $query);
  
 include_once 'templates/header.php'; 

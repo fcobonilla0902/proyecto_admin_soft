@@ -138,37 +138,36 @@ include_once '../../templates/header.php';
     
     <h3>¿Qué es IoT?</h3>
     <p>El Internet de las Cosas (Internet of Things) es una red de objetos físicos conectados a internet que pueden recoger, intercambiar y actuar según la información que reciben. 
-        Estos objetos pueden ser desde relojes inteligentes,cámaras de seguridad, refrigeradores o automóviles, hasta sensores industriales y dispositivos médicos.</p>
+        Estos objetos pueden ser desde relojes inteligentes, cámaras de seguridad, refrigeradores o automóviles, hasta sensores industriales y dispositivos médicos.</p>
     <br>
 
-    <img src="" alt="Imagen 1">
+    <img src="/src/img/modulos/internet/imagen1.png" alt="Imagen 1" class="internet_img">
 
     <br><br>
 
-    <p>Su función principal es comunicar datos sin intervención humana constante. </p>
+    <p>Su función principal es comunicar datos sin intervención humana constante.</p>
     <br>
-    <img src="" alt="Imagen 2">
+    <img src="/src/img/modulos/internet/imagen2.png" alt="Imagen 2" class="internet_img">
 
     <br><br>
 
     <p>Por ejemplo, imagina un termostato inteligente que detecta la temperatura de tu casa y ajusta automáticamente la calefacción o el aire acondicionado para mantenerla confortable, 
         incluso cuando no estás en casa. Componentes principales Dispositivos o “cosas” inteligentes</p>
     <br>
-    <img src="" alt="Imagen 3">
+    <img src="/src/img/modulos/internet/imagen3.png" alt="Imagen 3" class="internet_img">
 
     <br><br>
 
     <p>Son los objetos físicos conectados: sensores, cámaras, electrodomésticos, relojes, etc.</p>
-    <br>
 
     <p>Conectividad</p>
-    <img src="" alt="Imagen 4">
+    <img src="/src/img/modulos/internet/imagen4.png" alt="Imagen 4" class="internet_img">
 
     <br><br>
 
     <p>Permite que los dispositivos se comuniquen entre sí. Puede ser Wi-Fi, Bluetooth, 4G/5G o protocolos especializados como Zigbee o LoRaWAN. Plataforma o nube IoT</p>
     <br>
-    <img src="" alt="Imagen 5">
+    <img src="/src/img/modulos/internet/imagen5.png" alt="Imagen 5" class="internet_img">
 
     <br><br>
 
@@ -178,7 +177,7 @@ include_once '../../templates/header.php';
     <br><br>
 
     <p>Interfaz de usuario</p>
-    <img src="" alt="Imagen 6">
+    <img src="/src/img/modulos/internet/imagen6.png" alt="Imagen 6" class="internet_img">
     <br>
     <p>Es cómo el usuario interactúa con el sistema, por ejemplo, mediante una app que muestra la temperatura o notificaciones de seguridad.</p>
     <br><br><br>

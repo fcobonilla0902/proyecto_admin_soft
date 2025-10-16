@@ -135,69 +135,112 @@ include_once '../../templates/header.php';
             </div>
         </div>
     </div>
-    
-    <h3>¿Qué es IoT?</h3>
-    <p>El Internet de las Cosas (Internet of Things) es una red de objetos físicos conectados a internet que pueden recoger, intercambiar y actuar según la información que reciben. 
-        Estos objetos pueden ser desde relojes inteligentes, cámaras de seguridad, refrigeradores o automóviles, hasta sensores industriales y dispositivos médicos.</p>
+  <h2>¿Qué es el Internet de las Cosas (IoT)?</h2>
+    <hr>
+    <p>El <span class="resaltado">Internet de las Cosas</span> (<span class="resaltado">Internet of Things</span> o <span class="resaltado">IoT</span>) es, esencialmente, una red gigantesca de <span class="resaltado">objetos físicos</span> (las "cosas") que están conectados a internet. Estos objetos están equipados con <span class="resaltado">sensores, software y tecnologías</span> que les permiten <span class="resaltado">recoger, intercambiar y actuar</span> automáticamente según la información que reciben.</p>
+    <p>La función principal del IoT es <span class="resaltado">comunicar datos sin intervención humana constante</span>. Esto transforma cualquier objeto cotidiano —desde un reloj inteligente, una cámara de seguridad o un refrigerador, hasta sensores industriales y dispositivos médicos— en una fuente de información y un punto de acción.</p>
+
+    <div class="image-container">
+        <img src="/src/img/modulos/internet/imagen1.png" alt="Esquema general del Internet de las Cosas conectando dispositivos, datos y la nube" class="internet_img large">
+        <small>El IoT permite que dispositivos, personas y sistemas interactúen entre sí de manera autónoma.</small>
+    </div>
     <br>
 
-    <img src="/src/img/modulos/internet/imagen1.png" alt="Imagen 1" class="internet_img">
+    <h3>Un Ejemplo Sencillo: El Termostato Inteligente</h3>
+    <p>Imagina un <span class="resaltado">termostato inteligente</span> conectado. Este dispositivo detecta la temperatura actual de tu casa y la compara con la temperatura ideal que has programado. Si detecta una desviación, ajusta automáticamente la calefacción o el aire acondicionado para mantenerla confortable. Este proceso ocurre de forma autónoma, e incluso te permite controlarlo desde una app móvil aunque no estés en casa. En este ejemplo, el termostato es la "cosa", y la red Wi-Fi y la aplicación son parte de su infraestructura IoT.</p>
+
+    <hr>
+
+    <h2>Componentes Fundamentales del Sistema IoT</h2>
+    <p>Para que un sistema de Internet de las Cosas funcione de manera efectiva, se requieren cuatro elementos clave que trabajan juntos en un ciclo constante:</p>
+
+    <div class="component-section">
+        <h3>1. Dispositivos o "Cosas" Inteligentes</h3>
+        <p>Son los <span class="resaltado">objetos físicos</span> equipados con capacidad de recolección de datos y comunicación. Estos incluyen: <span class="resaltado">sensores</span> (que miden luz, temperatura, humedad, presión), <span class="resaltado">actuadores</span> (que ejecutan acciones físicas como abrir una válvula o encender una luz), cámaras, electrodomésticos, relojes, etc. Su misión es interactuar con el mundo físico y digitalizar esa interacción.</p>
+        <div class="image-container half-width">
+            <img src="/src/img/modulos/internet/imagen3.png" alt="Icono que representa dispositivos conectados, sensores y gadgets" class="internet_img">
+        </div>
+    </div>
+
+    <div class="component-section">
+        <h3>2. Conectividad (Redes de Comunicación)</h3>
+        <p>Este es el medio que permite que los dispositivos se <span class="resaltado">comuniquen</span> entre sí y envíen los datos recolectados. Las tecnologías de conectividad son variadas y se eligen según la necesidad de la aplicación (distancia, consumo de energía, volumen de datos):</p>
+        <ul>
+            <li><span class="resaltado">Corto alcance:</span> Wi-Fi, Bluetooth.</li>
+            <li><span class="resaltado">Largo alcance:</span> 4G/5G (celular).</li>
+            <li><span class="resaltado">Protocolos especializados de baja potencia:</span> Zigbee o LoRaWAN (ideales para entornos industriales o agrícolas).</li>
+        </ul>
+        <div class="image-container half-width">
+            <img src="/src/img/modulos/internet/imagen4.png" alt="Representación de diferentes protocolos de conexión (WiFi, 5G, Bluetooth)" class="internet_img">
+        </div>
+    </div>
+
+    <div class="component-section">
+        <h3>3. Plataforma o Nube IoT (Procesamiento y Almacenamiento)</h3>
+        <p>Es la infraestructura central, generalmente basada en la <span class="resaltado">nube</span>, donde los datos enviados por los dispositivos son <span class="resaltado">almacenados, procesados y analizados</span>. Estas plataformas ofrecen herramientas para gestionar los dispositivos, aplicar lógica de negocio y realizar análisis en tiempo real.</p>
+        <p><em>Ejemplo: Plataformas como AWS IoT Core, Microsoft Azure IoT o Google Cloud IoT permiten analizar vastas cantidades de información para generar perspectivas de valor.</em></p>
+        <div class="image-container half-width">
+            <img src="/src/img/modulos/internet/imagen5.png" alt="Esquema de datos fluyendo hacia una nube de procesamiento central" class="internet_img">
+        </div>
+    </div>
+
+    <div class="component-section">
+        <h3>4. Interfaz de Usuario y Aplicaciones</h3>
+        <p>Es el punto donde el <span class="resaltado">usuario interactúa</span> con el sistema. Aunque muchos procesos IoT son autónomos, la interfaz es necesaria para la configuración, la monitorización, y para recibir alertas o notificaciones.</p>
+        <p>Esto se presenta habitualmente como una <span class="resaltado">aplicación móvil</span>, un <span class="resaltado">tablero de control</span> (dashboard) en la web, o incluso un <span class="resaltado">altavoz inteligente</span> que permite el control por voz.</p>
+        <div class="image-container half-width">
+            <img src="/src/img/modulos/internet/imagen6.png" alt="Icono de una pantalla de aplicación móvil mostrando datos o controles" class="internet_img">
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Aplicaciones Clave del IoT en la Sociedad</h2>
+    <p>El Internet de las Cosas ha dejado de ser una idea futurista para convertirse en una realidad presente en múltiples aspectos de nuestra vida diaria. El objetivo es crear <span class="resaltado">ecosistemas más eficientes, sostenibles y seguros</span>.</p>
+
+    <h3>Hogares Inteligentes (Smart Home)</h3>
+    <p>Es la aplicación más visible para el consumidor. La conectividad transforma lo cotidiano, mejorando la comodidad, la eficiencia energética y la seguridad. Incluye:</p>
+    <ul>
+        <li><span class="resaltado">Automatización:</span> Focos que se encienden al detectar movimiento o termostatos que optimizan el consumo de energía.</li>
+        <li><span class="resaltado">Seguridad:</span> Cerraduras inteligentes y cámaras que envían alertas ante accesos no autorizados.</li>
+        <li><span class="resaltado">Asistencia:</span> Altavoces inteligentes (Alexa, Google Home) que controlan todos los aparatos con comandos de voz.</li>
+    </ul>
+    <div class="image-container half-width">
+        <img src="/src/img/modulos/internet/imagen7.png" alt="Cerradura Inteligente" class="internet_img">
+        <img src="/src/img/modulos/internet/imagen8.png" alt="Alexa" class="internet_img">
+    </div>
+
+    <h3>Industria 4.0 (IIoT) y Manufactura</h3>
+    <p>En la manufactura y la logística, el IoT se conoce como el <span class="resaltado">Internet Industrial de las Cosas (IIoT)</span>. Los sensores se utilizan para monitorear maquinaria en tiempo real, lo que permite:</p>
+    <ul>
+        <li><span class="resaltado">Mantenimiento Predictivo:</span> Detectar fallos o desgastes antes de que ocurran, evitando costosos tiempos de inactividad.</li>
+        <li><span class="resaltado">Optimización de Procesos:</span> Ajustar las líneas de producción en tiempo real basándose en los datos de rendimiento.</li>
+        <li><span class="resaltado">Gestión de Inventario:</span> Sensores en almacenes que rastrean la ubicación y cantidad de productos automáticamente.</li>
+    </ul>
+    <div class="image-container half-width">
+        <img src="/src/img/modulos/internet/imagen9.png" alt="Optimización de Procesos" class="internet_img">
+        <img src="/src/img/modulos/internet/imagen10.png" alt="Gestión de Inventario" class="internet_img">
+    </div>
+
+    <h3>Salud Conectada (eHealth) y Wearables</h3>
+    <p>Los dispositivos médicos conectados permiten un <span class="resaltado">seguimiento continuo</span> de signos vitales (frecuencia cardíaca, nivel de glucosa, etc.). Esto mejora la atención médica y la respuesta ante emergencias, ya que pueden enviar alertas automáticas al personal médico si se detectan anomalías. Los <span class="resaltado">wearables</span> o dispositivos ponibles son el ejemplo más común de esta aplicación.</p>
+    <div class="image-container half-width">
+        <img src="/src/img/modulos/internet/imagen11.png" alt="eHealth" class="internet_img">
+    </div>
+
+    <h3>Ciudades Inteligentes (Smart Cities)</h3>
+    <p>El IoT facilita la <span class="resaltado">gestión de servicios públicos</span> a gran escala. Las ciudades usan sensores para:</p>
+    <ul>
+        <li><span class="resaltado">Tráfico:</span> Sistemas automatizados que ajustan semáforos para reducir la congestión.</li>
+        <li><span class="resaltado">Servicios:</span> Alumbrado público que se ajusta según la luz ambiental y la presencia de personas.</li>
+        <li><span class="resaltado">Residuos:</span> Sensores de llenado en contenedores que optimizan las rutas de recolección de basura, ahorrando combustible y tiempo.</li>
+    </ul>
+    <div class="image-container half-width">
+        <img src="/src/img/modulos/internet/imagen12.png" alt="Smart Cities" class="internet_img">
+    </div>
 
     <br><br>
 
-    <p>Su función principal es comunicar datos sin intervención humana constante.</p>
-    <br>
-    <img src="/src/img/modulos/internet/imagen2.png" alt="Imagen 2" class="internet_img">
-
-    <br><br>
-
-    <p>Por ejemplo, imagina un termostato inteligente que detecta la temperatura de tu casa y ajusta automáticamente la calefacción o el aire acondicionado para mantenerla confortable, 
-        incluso cuando no estás en casa. Componentes principales Dispositivos o “cosas” inteligentes</p>
-    <br>
-    <img src="/src/img/modulos/internet/imagen3.png" alt="Imagen 3" class="internet_img">
-
-    <br><br>
-
-    <p>Son los objetos físicos conectados: sensores, cámaras, electrodomésticos, relojes, etc.</p>
-
-    <p>Conectividad</p>
-    <img src="/src/img/modulos/internet/imagen4.png" alt="Imagen 4" class="internet_img">
-
-    <br><br>
-
-    <p>Permite que los dispositivos se comuniquen entre sí. Puede ser Wi-Fi, Bluetooth, 4G/5G o protocolos especializados como Zigbee o LoRaWAN. Plataforma o nube IoT</p>
-    <br>
-    <img src="/src/img/modulos/internet/imagen5.png" alt="Imagen 5" class="internet_img">
-
-    <br><br>
-
-    <p>Es donde se almacenan y procesan los datos enviados por los dispositivos.</p>
-    <p>Ejemplo: plataformas como AWS IoT Core o Google Cloud IoT permiten analizar información en tiempo real.</p>
-
-    <br><br>
-
-    <p>Interfaz de usuario</p>
-    <img src="/src/img/modulos/internet/imagen6.png" alt="Imagen 6" class="internet_img">
-    <br>
-    <p>Es cómo el usuario interactúa con el sistema, por ejemplo, mediante una app que muestra la temperatura o notificaciones de seguridad.</p>
-    <br><br><br>
-
-    <h3>Aplicaciones del IoT</h3>
-    <p>El Internet de las Cosas ha dejado de ser una idea futurista para convertirse en una realidad presente en múltiples aspectos de nuestra vida diaria. En el ámbito 
-        doméstico, los hogares inteligentes son uno de los ejemplos más claros de cómo la conectividad transforma lo cotidiano. Dispositivos como focos que se encienden 
-        automáticamente al detectar movimiento, refrigeradores que avisan cuando falta alimento, o asistentes de voz como Alexa y Google Home que controlan otros aparatos 
-        con simples comandos, muestran cómo la automatización puede mejorar la comodidad, la eficiencia energética y la seguridad. De igual forma, las cerraduras inteligentes 
-        permiten abrir o cerrar puertas desde una aplicación móvil, e incluso enviar alertas cuando alguien intenta acceder sin permiso, uniendo funcionalidad con protección.
-    </p>
-    <p>    
-        Fuera del hogar, el IoT también tiene un impacto profundo en sectores más amplios como la industria, la salud, el transporte y las ciudades. En la Industria 4.0, los
-        sensores IoT se utilizan para monitorear maquinaria en tiempo real, detectar fallos antes de que ocurran y optimizar los procesos de producción, reduciendo costos y
-        tiempos de inactividad. En el sector salud, los dispositivos médicos conectados permiten un seguimiento continuo de signos vitales, como la frecuencia cardíaca o el 
-        nivel de glucosa, y pueden enviar alertas automáticas al personal médico si se detectan anomalías, mejorando la atención y la respuesta ante emergencias. Por otro lado,
-        los vehículos conectados son capaces de recibir actualizaciones de software, analizar su propio estado mecánico o compartir información sobre el tráfico para evitar 
-        accidentes. Finalmente, en las llamadas ciudades inteligentes, el IoT facilita la gestión de servicios públicos, como el alumbrado que se ajusta según la luz ambiental, 
-        la recolección de basura optimizada mediante sensores de llenado o los sistemas de tráfico automatizados que reducen la congestión. En conjunto, todas estas aplicaciones
-        muestran que el IoT no solo busca conectar objetos, sino crear ecosistemas más eficientes, sostenibles y seguros para la sociedad.</p>
 </main>
 
 <script>

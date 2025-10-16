@@ -101,7 +101,35 @@ p{
     padding-left: 5px;
 }
 
-.internet_img{
-    max-width: 500px;
-    max-height: 350px;
+.internet_img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.image-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+/* Estilo para imágenes de ancho medio */
+.image-container.half-width {
+    max-width: 450px; /* Limita el ancho */
+    margin-left: 0; /* Alinea a la izquierda para un layout de texto/imagen */
+    display: flex;
+    gap: 30px;
+}
+
+/* Estilos para listas */
+ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding-left: 0;
+}
+
+.resaltado{
+    font-weight: bold;
 }

@@ -26,10 +26,17 @@ include_once '../templates/header.php'; ?>
 <main class="soporteWrapper">
 
     <?php
+    $i = 0;
         while ($fila = mysqli_fetch_assoc($resultado)):
             $primerNombre = strtolower(strtr(explode(" ", $fila['nombre'])[0], ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','Á'=>'a','É'=>'e','Í'=>'i','Ó'=>'o','Ú'=>'u']));
+            $paginas = ["https://www.fime.uanl.mx/preguntas-frecuentes/", 
+                        "/src/pdf/Manual_usuario_proy-pmbok.pdf", 
+                        "https://www.youtube.com/playlist?list=PL-_ObXiitJQCjOBAbjiGWTisOOERwdDf5",
+                        "https://www.fime.uanl.mx/buzon-de-sugerencias/",
+                        "https://www.fime.uanl.mx/contacto/",
+                        "https://www.google.com/maps/place/Faculty+of+Mechanical+and+Electrical+Engineering+UANL/@25.7253908,-100.3137887,15z/data=!4m5!3m4!1s0x86629452551ea79f:0x66e03550ec5730cb!8m2!3d25.7253908!4d-100.3055993"];
     ?>
-        <a href="#" id="<?php echo $primerNombre;?>">
+        <a href="<?php echo $paginas[$i]; ?>" target="_blank">
             <div class="soporte">
                 <h3><?php echo $fila['nombre'];?></h3>
                 <img src="<?php echo '/src/img/soporte/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre'];?>">
@@ -37,11 +44,10 @@ include_once '../templates/header.php'; ?>
             </div>
         </a>     
     <?php    
+        $i++;  
         endWhile;
     ?>
 
 </main>
-
-<script src="../src/js/soporte.js"></script>
 
  <?php include_once '../templates/footer.php'; ?>

@@ -24,10 +24,10 @@ GOOGLE_API_KEY=<AQUI ESCRIBE LA CLAVE QUE TE PROPORCIONO TU EQUIPO>
 Para ejecutar el server debes de volver a establecer la clave de google desde la terminal.
 ```
 # Si estas en cmd
-set GOOGLE_API_KEY=<CLAVE>
+set GOOGLE_API_KEY=<AIzaSyBwQA0jC2uioHW3kl5-X1lgFoCGLhcIT1I>
 
 # Si estas en powershell
-$env:GOOGLE_API_KEY = "<CLAVE>"
+$env:GOOGLE_API_KEY = "AIzaSyBwQA0jC2uioHW3kl5-X1lgFoCGLhcIT1I"
 
 # Ejecutar el server
 node src/js/ai/agent_server_http.mjs

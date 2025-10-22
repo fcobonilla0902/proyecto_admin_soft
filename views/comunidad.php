@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="autor-info">
                         <p class="nombre"><?php echo htmlspecialchars($comunidad['nombre']); ?></p>
-                        <p class="rol"><?php echo ($comunidad['tipo'] == 1) ? "Alumno de FIME" : "Alumno Externo"; ?></p> 
+                        <p class="rol"><?php echo ($comunidad['tipo'] == 1) ? "Alumno UANL" : "Alumno Externo"; ?></p> 
                     </div>
                 </div>
 

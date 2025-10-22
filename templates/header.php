@@ -5,6 +5,8 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 if(isset($_GET['op'])){
     $op = $_GET['op'];
+} else {
+    $op = 1;
 }
 
 $alumno = isset($_SESSION['alumno']) ? $_SESSION['alumno'] : '';

@@ -154,9 +154,6 @@ include_once '../../templates/header.php';
     <h2>Componentes Fundamentales del Sistema IoT</h2>
     <p>Para que un sistema de Internet de las Cosas funcione de manera efectiva, se requieren cuatro elementos clave que trabajan juntos en un ciclo constante:</p>
 
-<h2>Componentes Fundamentales del Sistema IoT</h2>
-    <p>Para que un sistema de Internet de las Cosas funcione de manera efectiva, se requieren cuatro elementos clave que trabajan juntos en un ciclo constante:</p>
-
     <div class="component-section">
         <h3>1. Dispositivos o "Cosas" Inteligentes</h3>
         <div class="component-content-wrapper">

@@ -29,7 +29,7 @@ include_once '../templates/header.php'; ?>
         while ($fila = mysqli_fetch_assoc($resultado)):
             $primerNombre = strtolower(strtr(explode(" ", $fila['nombre'])[0], ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','Á'=>'a','É'=>'e','Í'=>'i','Ó'=>'o','Ú'=>'u']));
     ?>
-        <a href="#">
+        <a href="#" id="<?php echo $primerNombre;?>">
             <div class="soporte">
                 <h3><?php echo $fila['nombre'];?></h3>
                 <img src="<?php echo '/src/img/soporte/' . $primerNombre . '.png';?>" alt="<?php echo $fila['nombre'];?>">
@@ -41,5 +41,7 @@ include_once '../templates/header.php'; ?>
     ?>
 
 </main>
+
+<script src="../src/js/soporte.js"></script>
 
  <?php include_once '../templates/footer.php'; ?>
